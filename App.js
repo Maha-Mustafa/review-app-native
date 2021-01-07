@@ -4,6 +4,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import Home from './screens/Home';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
+// import Navigator from './routes/homeStack';
+import Navigator from './routes/drawer';
 //register fonts
 const getFonts = () =>{
   return Font.loadAsync({
@@ -16,7 +18,7 @@ export default function App() {
   const[fontsLoaded, setFontsLoaded] = useState(false);
   if(fontsLoaded){
     return (
-      <Home/>
+      <Navigator/>
     ); 
   }else{
     //it will show apploading component
